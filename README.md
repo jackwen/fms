@@ -86,6 +86,19 @@ http://127.0.0.1:8000
 admin admin
 ```
 
+### Docker
+
+```
+	docker-compose up
+	
+	#首次启动需要初始化
+	docker exec -it fms_app python manage.py makemigrations
+	docker exec -it fms_app python manage.py migrate
+	docker exec -it fms_app python manage.py loaddata default_types
+	docker exec -it fms_app python manage.py loaddata default_user
+	docker exec -it fms_app python manage.py runserver 0.0.0.0:8000
+```
+
 ### 交流
 ![赞赏](https://raw.githubusercontent.com/geekwolf/fms/master/doc/images/wxzf.png)
 ![微信](https://raw.githubusercontent.com/geekwolf/fms/master/doc/images/wx.jpg)

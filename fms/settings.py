@@ -88,9 +88,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'fms',
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'PASSWORD': 'root',
+        'HOST': 'db',
         'PORT': '3306',
+        'DEFAULT_CHARSET': 'utf-8',
     }
 }
 
@@ -156,7 +157,7 @@ EMAIL_DOMAIN_LINK = 'http://127.0.0.1'
 
 # Zabbix故障自动录入fms
 
-ZABBIX_AUTO_RECORD = True
+ZABBIX_AUTO_RECORD = False
 ZABBIX_DB_HOST = '192.168.104.152'
 ZABBIX_DB_PORT = '3306'
 ZABBIX_DB_USER = 'test'
